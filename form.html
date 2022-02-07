@@ -1,0 +1,212 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Abstract</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+  	<div class="container">
+  		<img src="https://www.nationalpolice.go.ke/templates/corpway/images/s5_logo.png" class="img-fluid" alt="Responsive image">
+      <form action="" method="post" class="col-md-6 offset-2 py-4">
+        <div class="form-group">
+          <div id="formprocessing" name="formprocessing" style="color:green; font-style: italic;" size="250" ></div>
+          <div id="error" name="error" style="color:red; font-style: italic;" size="250" ></div>
+        </div>
+       <div class="form-group">
+         <label for="">ID Number</label>
+         <input type="text" class="form-control" name="id_no" id="id_number" onkeypress="return event.charCode >= 47 && event.charCode <= 57"  value="" onchange="validateid(id_number.value);" aria-describedby="helpId" placeholder="ID Number">
+         <small id="helpId" class="form-text text-muted">Enter Client ID Number</small>
+       </div>
+
+       <div class="form-group">
+         <label for="">Client's Names</label>
+         <input type="text" class="form-control" name="client_names" id="client_names" value="" aria-describedby="helpId" placeholder="Full Name" required>
+         <small id="helpId" class="form-text text-muted">The field to comprise of the client's Names.</small>
+       </div>
+	  
+	     
+	   <div class="form-group">
+         <label for="">OB NUMBER </label>
+         <input type="text" class="form-control" name="ob" id="ob" value="" aria-describedby="helpId" placeholder="Key in the OB number assisgned" required>
+         <small id="helpId" class="form-text text-muted">Key in the OB number</small>
+       </div>
+
+     <div class="form-group">
+	    <label for="exampleFormControlSelect1">Select Your Centre</label>
+	    <select class="form-control" id="exampleFormControlSelect1">
+	      <option value='BARINGO'>BARINGO HUDUMA CENTRE</option>
+	      <option value='BOMET'>BOMET HUDUMA CENTRE</option>
+	      <option value='BUNGOMA'>BUNGOMA HUDUMA CENTRE</option>
+	      <option value='BUSIA'>BUSIA HUDUMA CENTRE</option>
+	      <option value='CITY SQUARE'>CITY SQUARE HUDUMA CENTRE</option>
+	      <option value='EASTLEIGH'>EASTLEIGH HUDUMA CENTRE</option>
+	      <option value='ELGEYO MARAKWET'>ELGEYO MARAKWET HUDUMA CENTRE</option>
+	      <option value='EMBU'>EMBU HUDUMA CENTRE</option>
+	      <option value='GARISSA'>GARISSA HUDUMA CENTRE</option>
+	      <option value='HOMABAY'>HOMABAY HUDUMA CENTRE</option>
+	      <option value='ISIOLO'>ISIOLO HUDUMA CENTRE</option>
+	      <option value='KAJIADO'>KAJIADO HUDUMA CENTRE</option>
+	      <option value='KAJIADO WEST'>KAJIADO WEST HUDUMA CENTRE</option>
+	      <option value='KAKAMEGA'>KAKAMEGA HUDUMA CENTRE</option>
+	      <option value='KERICHO'>KERICHO HUDUMA CENTRE</option>
+	      <option value='KIAMBU'>KIAMBU HUDUMA CENTRE (THIKA)</option>
+	      <option value='KIBRA'>KIBRA HUDUMA CENTRE</option>
+	      <option value='KILIFI'>KILIFI HUDUMA CENTRE</option>
+	      <option value='KIRINYAGA'>KIRINYAGA HUDUMA CENTRE</option>
+	      <option value='KISII'>KISII HUDUMA CENTRE</option>
+	      <option value='KISUMU'>KISUMU HUDUMA CENTRE</option>
+	      <option value='KITALE'>KITALE HUDUMA CENTRE</option>
+	      <option value='KITUI'>KITUI HUDUMA CENTRE</option>
+	      <option value='KWALE'>KWALE HUDUMA CENTRE</option>
+	      <option value='LAIKIPIA'>LAIKIPIA HUDUMA CENTRE</option>
+	      <option value='LAMU'>LAMU HUDUMA CENTRE</option>
+	      <option value='MACHAKOS'>MACHAKOS HUDUMA CENTRE</option>
+	      <option value='MAKADARA'>MAKADARA HUDUMA CENTRE</option>
+	      <option value='MAKUENI'>MAKUENI HUDUMA CENTRE</option>
+	      <option value='MANDERA'>MANDERA HUDUMA CENTRE</option>
+	      <option value='MARSABIT'>MARSABIT HUDUMA CENTRE</option>
+	      <option value='MERU'>MERU HUDUMA CENTRE</option>
+	      <option value='MIGORI'>MIGORI HUDUMA CENTRE</option>
+	      <option value='MOMBASA'>MOMBASA HUDUMA CENTRE</option>
+	      <option value='MURANGA'>MURANGA HUDUMA CENTRE</option>
+	      <option value='NAKURU'>NAKURU HUDUMA CENTRE</option>
+	      <option value='NANDI'>NANDI HUDUMA CENTRE</option>
+	      <option value='NAROK'>NAROK HUDUMA CENTRE</option>
+	      <option value='NYAMIRA'>NYAMIRA HUDUMA CENTRE</option>
+	      <option value='NYANDARUA'>NYANDARUA HUDUMA CENTRE</option>
+	      <option value='NYERI'>NYERI HUDUMA CENTRE</option>
+	      <option value='GPO'>GPO HUDUMA CENTRE</option>
+	      <option value='SAMBURU'>SAMBURU HUDUMA CENTRE</option>
+	      <option value='SIAYA'>SIAYA HUDUMA CENTRE</option>
+	      <option value='TAITA TAVETA'>TAITA TAVETA HUDUMA CENTRE</option>
+	      <option value='TANA RIVER'>TANA RIVER HUDUMA CENTRE</option>
+	      <option value='THARAKA NITHI'>THARAKA NITHI HUDUMA CENTRE</option>
+	      <option value='TURKANA'>TURKANA HUDUMA CENTRE</option>
+	      <option value='UASIN GISHU'>UASIN GISHU HUDUMA CENTRE</option>
+	      <option value='VIHIGA'>VIHIGA HUDUMA CENTRE</option>
+	      <option value='WAJIR'>WAJIR HUDUMA CENTRE</option>
+	      <option value='WEST POKOT'>WEST POKOT HUDUMA CENTRE</option>			
+	     </select>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="exampleFormControlSelect1">Abstract Type</label>
+	    <select class="form-control" id="exampleFormControlSelect1">
+	      <option>1</option>
+	      <option>2</option>
+	      <option>3</option>
+	      <option>4</option>
+	      <option>5</option>
+	    </select>
+	  </div>
+	  		<button type="submit" class="btn btn-primary">Generate Abstract</button>
+      </form>
+
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js"
+		integrity="sha512-bYkaBWaFtfPIMYt9+CX/4DWgfrjcHinjerNYxQmQx1VM76eUsPPKZa5zWV8KksVkBF/DaHSADCwil2J5Uq2ctA=="
+		crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+
+	window.onload = () => {
+		
+	};
+
+	var url = "http://10.65.70.40/hudumaapi/citizen/read_one.php?id="; // The server-side script
+	var token="&accesskey=H9950P4bx3LiZJRr7UddmjXhBoewoq0O:Brh6zdIjGvze5PBuzc7NqGh3oWxUtEa7chzuzw4SN7MdO6k7UPjduHYx4hzmNsgv";
+	function validateid(x) {      
+		var sId = x+token;
+		var link1= url+sId;
+		
+		document.getElementById('formprocessing').innerHTML='fetching client details...';
+		document.getElementById('error').value = "";
+		axios.get(link1).then((response)=>{
+			console.log(response);
+
+			let res = response.data;
+
+			var fname = res.firstname;
+			// console.log(fname)
+			var mname = res.middlename;
+			var lname = res.lastname;
+			//var client_names = fname+" "+mname+" "+lname;
+			var dob = res.dob;
+			var placeofbirth = res.placeofbirth;
+			var gender = res.gender;
+			var responsecode = res.responsecode;
+			var responsedesc = res.responsedesc;
+		
+			if (mname == null)
+			{
+			var client_names=fname+" "+lname;
+			}
+			else
+			{
+			var client_names = fname+" "+mname+" "+lname;
+			}
+			
+			if (gender == 'M')
+			{
+			var client_gender='Male';
+			}
+			else
+			{
+			var client_gender = 'Female';
+			}
+
+
+
+			
+			if (responsedesc == "Failure")
+			{
+				document.getElementById('formprocessing').innerHTML = "Data fetch was " + responsedesc;
+				document.getElementById('hideformprocessing').value = "Validation was a " + responsedesc;
+				document.getElementById('firstname').value = "";
+				document.getElementById('middlename').value = "";
+				document.getElementById('lastname').value = "";
+				document.getElementById('dob').value = "";
+				document.getElementById('placeofbirth').value = "";
+				document.getElementById('gender').value = "";
+			}
+			if (responsedesc == "Successful")
+			{
+				document.getElementById('formprocessing').innerHTML = "Validation was " + responsedesc;
+				// document.getElementById('hideformprocessing').value = "Validation was " + responsedesc;
+				document.getElementById('client_names').value = client_names;
+				document.getElementById('dob').value = dob;
+				document.getElementById('pob').value = placeofbirth;
+				document.getElementById('gender').value = client_gender;
+
+				// finish implementing the rest of the form
+
+				// document.getElementById('middlename').value = mname;
+				// document.getElementById('lastname').value = lname;
+				// document.getElementById('dob').value = dob;
+				// document.getElementById('placeofbirth').value = placeofbirth;
+				// if (gender == "M")
+				// {
+				// 	document.getElementById('gender').selectedIndex = "1";
+				// } else {
+				// 	document.getElementById('gender').selectedIndex = "2";
+				// }
+			}
+		})
+	}
+	</script>
+  </body>
+</html>
